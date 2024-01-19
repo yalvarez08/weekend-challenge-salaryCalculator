@@ -1,2 +1,11 @@
 // *** WEEKEND CHALLENGE 1 ***
-console.log('hey javascript is working!)')
+
+
+function onReady() {
+
+
+console.log('hey javascript is working!')
+}
+
+onReady();
+
