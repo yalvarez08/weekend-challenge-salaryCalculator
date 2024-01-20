@@ -10,42 +10,74 @@
 <body>
   <header>
     <h1>Salary Calculator</h1>
-
-    <!---insert form below-->
-    <form onSubmit="performSubmit(event)">
-      <input
-        id="first_name_input"
-        placeholder="First Name"
-        type="text"
-      >
-      <input
-        id="last_name_input"
-        placeholder="Last Name"
-        type="text"
-      >
-      <input
-        id="id_num_input"
-        placeholder="ID Number"
-        type="text"
-      >
-      <input
-        id="job_input"
-        placeholder="Job Title"
-        type="text"
-      >
-      <input
-        id="ann_salary_input"
-        placeholder="Annual Salary"
-        type="text"
-      >
-      <button type="submit">Submit</button>
-
-    </form>
   </header>
+
   <main>
+    <section>
     <h2>Add Employee</h2>
-    <h2>Employees</h2>
+      <!---insert form below-->
+      <form onSubmit="performSubmit(event)">
+          <input
+            id="first_name_input"
+            placeholder="First Name"
+            type="text"
+          >
+          <input
+            id="last_name_input"
+            placeholder="Last Name"
+            type="text"
+          >
+          <input
+            id="id_num_input"
+            placeholder="ID Number"
+            type="text"
+          >
+          <input
+            id="job_input"
+            placeholder="Job Title"
+            type="text"
+          >
+          <input
+            id="ann_salary_input"
+            placeholder="Annual Salary"
+            type="text"
+          >
+          <button type="submit">Submit</button>
+    
+      </form>
+    </section>
+
+    <section></section>
+      <h2>Employees</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <!--- location where form inputs will show in table-->
+            <!---<td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td> -->
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </section>
   </main>
+
   <footer>
     <p>Total Monthly</p>
   </footer>
