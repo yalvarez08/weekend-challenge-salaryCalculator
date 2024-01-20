@@ -21,46 +21,59 @@ event.preventDefault();
 
 
 //get all form input elements 
-let fNameElement = document.getElementById('first_name_input');
-let lNameElement = document.getElementById('last_name_input');
-let idElement = document.getElementById('id_num_input');
-let jobElement = document.getElementById('job_input');
-let annSalaryElement = document.getElementById('ann_salary_input');
+let firstElement = document.querySelector('[data-testid="firstNameInput"]');
+let lastElement = document.querySelector('[data-testid="lastNameInput"]');
+let idElement = document.querySelector('[data-testid="idInput"]');
+let titleElement = document.querySelector('[data-testid="titleInput"]');
+let annualSalaryElement = document.querySelector('[data-testid="annualSalaryInput"]');
 
 
 let formInputContainer = document.querySelector('tbody');
 
 formInputContainer.innerHTML += `
-<td>${fNameElement.value}</td><td>${lNameElement.value}</td><td>${idElement.value}</td>
-<td>${jobElement.value}</td><td>${annSalaryElement.value}</td>
+<td>${firstElement.value}</td><td>${lastElement.value}</td><td>${idElement.value}</td>
+<td>${titleElement.value}</td><td>${annualSalaryElement.value}</td>
 `;
 
 
 
 //clear form inputs after submit takes place
-fNameElement.value = '';
-lNameElement.value = '';
+firstElement.value = '';
+lastElement.value = '';
 idElement.value = '';
-jobElement.value = '';
-//annSalaryElement.value = '';
+titleElement.value = '';
+annualSalaryElement.value = '';
 
-totalFooterCount = document.getElementById('ann_salary_input');
-
-
-// let totalCountElement = document.getElementById('total_count');
-// totalCountElement.textContent = `$ ${totalFooterCount.value}`;
-let sum = 0;
-for (let i=0; i<totalFooterCount.length; i++) {
-    if(parseFloat(totalFooterCount[i].value)) 
-         sum += parseFloat(totalFooterCount[i].value);
 }
-document.getElementById('total_count').value = sum;
+
+
+function performFooterCalculation(event){
+
+event.preventDefault();
+
+totalFooterCount = 10;
+
+
+
+let totalCountElement = document.getElementById('total_count');
+totalCountElement.textContent = `${totalFooterCount}`;
+
+}
+
+
+
+// let sum = 0;
+// for (let i=0; i<totalFooterCount.length; i++) {
+//     if(parseFloat(totalFooterCount[i].value)) 
+//          sum += parseFloat(totalFooterCount[i].value);
+// }
+// document.getElementById('total_count').value = sum;
 
     // //totalCountElement.textContent = '$', sum;
     // let totalCountElement = sum;
     // totalCountElement.textContent = `$ ${totalCountElement}`;
 
-}
+
 
 
 
