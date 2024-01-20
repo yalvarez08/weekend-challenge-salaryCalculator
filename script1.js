@@ -1,10 +1,14 @@
 // *** WEEKEND CHALLENGE 1 ***
 
+let totalFooterCount= 0;
 
 function onReady() {
 
-
 console.log('hey javascript is working!')
+
+
+let totalCountElement = document.getElementById('total_count');
+totalCountElement.textContent = `$ ${totalFooterCount}`;
 }
 
 onReady();
@@ -38,5 +42,30 @@ fNameElement.value = '';
 lNameElement.value = '';
 idElement.value = '';
 jobElement.value = '';
-annSalaryElement.value = '';
+//annSalaryElement.value = '';
+
+totalFooterCount = document.getElementById('ann_salary_input');
+
+
+// let totalCountElement = document.getElementById('total_count');
+// totalCountElement.textContent = `$ ${totalFooterCount.value}`;
+let sum = 0;
+for (let i=0; i<totalFooterCount.length; i++) {
+    if(parseFloat(totalFooterCount[i].value)) 
+         sum += parseFloat(totalFooterCount[i].value);
 }
+document.getElementById('total_count').value = sum;
+
+    // //totalCountElement.textContent = '$', sum;
+    // let totalCountElement = sum;
+    // totalCountElement.textContent = `$ ${totalCountElement}`;
+
+}
+
+
+
+
+//update count each time entry is submitted
+//totalCountElement.textContent = `$ ${totalCountElement}`;
+
+
