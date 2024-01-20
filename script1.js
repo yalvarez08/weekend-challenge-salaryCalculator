@@ -28,7 +28,7 @@ let formInputContainer = document.querySelector('tbody');
 
 formInputContainer.innerHTML += `
 <td>${fNameElement.value}</td><td>${lNameElement.value}</td><td>${idElement.value}</td>
-<td${jobElement.value}</td><td>${annSalaryElement.value}</td>
+<td>${jobElement.value}</td><td>${annSalaryElement.value}</td>
 `;
 
 
