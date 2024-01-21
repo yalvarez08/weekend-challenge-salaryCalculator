@@ -1,6 +1,8 @@
 // *** WEEKEND CHALLENGE 1 ***
 
 let totalFooterCount= 0;
+//let annualSumArray = [];
+
 
 function onReady() {
 
@@ -33,52 +35,73 @@ let formInputContainer = document.querySelector('tbody');
 formInputContainer.innerHTML += `
 <td>${firstElement.value}</td><td>${lastElement.value}</td><td>${idElement.value}</td>
 <td>${titleElement.value}</td><td>${annualSalaryElement.value}</td>
+<td>
+<button onClick="deleteEmployeeRow(event)">Delete</button>
+</td>
 `;
 
 
 
-//clear form inputs after submit takes place
+//clear form inputs after submit action
 firstElement.value = '';
 lastElement.value = '';
 idElement.value = '';
 titleElement.value = '';
-annualSalaryElement.value = '';
-
-}
-
-
-function performFooterCalculation(event){
-
-event.preventDefault();
-
-totalFooterCount = 10;
+//annualSalaryElement.value = '';
 
 
 
+
+totalFooterCount += parseFloat(annualSalaryElement.value)/12;
+//console.log('current total mnth cost:', totalFooterCount);
+
+totalFooterCount = parseFloat(totalFooterCount);
+console.log(totalFooterCount);
+
+
+
+ //update count each time entry is submitted
 let totalCountElement = document.getElementById('total_count');
-totalCountElement.textContent = `${totalFooterCount}`;
+totalCountElement.innerHTML= `$ ${totalFooterCount}`;
 
+
+if(totalFooterCount > 20000) {
+    let footerCount = document.getElementById('total_count');
+    footerCount.classList.add('over-budget');
+
+ } else {
+    let footerCount = document.getElementById('total_count');
+
+    }
 }
+ 
 
 
 
-// let sum = 0;
-// for (let i=0; i<totalFooterCount.length; i++) {
-//     if(parseFloat(totalFooterCount[i].value)) 
-//          sum += parseFloat(totalFooterCount[i].value);
-// }
-// document.getElementById('total_count').value = sum;
+function deleteEmployeeRow(event) {
+    event.target.parentElement.parentElement.remove();
 
-    // //totalCountElement.textContent = '$', sum;
-    // let totalCountElement = sum;
-    // totalCountElement.textContent = `$ ${totalCountElement}`;
+ }
 
 
+// function storeAnnSalaryInputs(event) {
+//     event.preventDefault();
+    
+//     let annualInputs = document.querySelector('[data-testid="annualSalaryInput"]');
+//     let annualTotalInputs = annualInputs.value;
 
+//     annualSumArray.push(annualTotalInputs);
+//     console.log(annualSumArray);
+    
+//     for (let i=0; i<annualSumArray.length; i++) {
+//         if (parseFloat(annualSumArray[i]))
+//          totalFooterCount += parseInt(annualSumArray[i]);
+//     }
+//      console.log(totalFooterCount);
 
+//     let totalCountElement = document.getElementById('total_count');
+//     totalCountElement.textContent = `$ ${totalFooterCount}`;
+//}
 
-
-//update count each time entry is submitted
-//totalCountElement.textContent = `$ ${totalCountElement}`;
 
 
