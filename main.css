@@ -25,10 +25,10 @@ table {
     background: #dcdcdc;
   }
 
-  .over-budget:active {
+  .over-budget {
     font-family: serif; 
-    color: #008000;
-    animation: animate 1.5s linear infinite; 
+    background-color: #e02c08;
+    animation: animate 2s linear infinite; 
   }
   @keyframes animate{ 
     0%{ 

@@ -62,18 +62,19 @@ console.log(totalFooterCount);
 
  //update count each time entry is submitted
 let totalCountElement = document.getElementById('total_count');
-totalCountElement.innerHTML= `$ ${totalFooterCount}`;
+totalCountElement.textContent= `$ ${totalFooterCount}`;
 
 
 if(totalFooterCount > 20000) {
-    let footerCount = document.getElementById('total_count');
+    let footerCount = document.getElementById('footer-element');
     footerCount.classList.add('over-budget');
-
+    //totalFooterCount.classList.add('over-budget');
  } else {
-    let footerCount = document.getElementById('total_count');
-
+    totalCountElement.textContent= `$ ${totalFooterCount}`;
     }
 }
+
+
  
 
 
