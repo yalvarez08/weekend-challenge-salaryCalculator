@@ -1,7 +1,6 @@
 // *** WEEKEND CHALLENGE 1 ***
 
 let totalFooterCount= 0;
-//let annualSumArray = [];
 
 
 function onReady() {
@@ -74,18 +73,14 @@ if(totalFooterCount > 20000) {
     }
 }
 
-
- 
-
-
-
+// create function that will delete employee from table 
 function deleteEmployeeRow(event) {
     event.target.parentElement.parentElement.remove();
 
  }
 
-
-// function storeAnnSalaryInputs(event) {
+// let annualSumArray = [];
+// function footerCalculation(event) {
 //     event.preventDefault();
     
 //     let annualInputs = document.querySelector('[data-testid="annualSalaryInput"]');
@@ -95,7 +90,7 @@ function deleteEmployeeRow(event) {
 //     console.log(annualSumArray);
     
 //     for (let i=0; i<annualSumArray.length; i++) {
-//         if (parseFloat(annualSumArray[i]))
+//         if (parseInt(annualSumArray[i]))
 //          totalFooterCount += parseInt(annualSumArray[i]);
 //     }
 //      console.log(totalFooterCount);
@@ -103,6 +98,3 @@ function deleteEmployeeRow(event) {
 //     let totalCountElement = document.getElementById('total_count');
 //     totalCountElement.textContent = `$ ${totalFooterCount}`;
 //}
-
-
-
