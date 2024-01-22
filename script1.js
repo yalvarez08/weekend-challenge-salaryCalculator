@@ -36,7 +36,7 @@ formInputContainer.innerHTML += `
 <td>${firstElement.value}</td><td>${lastElement.value}</td><td>${idElement.value}</td>
 <td>${titleElement.value}</td><td>${annualSalaryElement.value}</td>
 <td>
-<button onClick="deleteEmployeeRow(event)">Delete</button>
+<button id="delete-btn" onClick="deleteEmployeeRow(event)">Delete</button>
 </td>
 `;
 

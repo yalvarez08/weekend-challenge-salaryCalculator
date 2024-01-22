@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1>Salary Calculator</h1>
+    <h1>Employee Salary Calculator</h1>
   </header>
 
   <main>
@@ -42,7 +42,7 @@
             placeholder="Annual Salary"
             type="text"
           >
-          <button data-testid="submit">Submit</button>
+          <button data-testid="submit" id="submit-btn">Submit</button>
     
       </form>
     </section>
@@ -76,7 +76,7 @@
   </main>
 
   <footer id="footer-element" onSubmit="performSubmit(event)">
-    <p>Total Monthly: <span id="total_count"></span></p>
+    <h3>Total Monthly: <span id="total_count"></span></h3>
 
   </footer>
 </body>
