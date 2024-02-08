@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="main.css">
-  <script defer src="script1.js"></script>  
+  <script defer src="script.js"></script>  
 
   <title>Salary Calculator</title>
 </head>
@@ -16,39 +16,44 @@
     <section>
     
       <!---insert form below-->
-      <form onSubmit="performSubmit(event)">
+      <form onSubmit="submitEmployee(event)">
         <h2>Add Employee</h2>
           <input
             data-testid="firstNameInput"
+            id="firstNameInput"
             placeholder="First Name"
             type="text"
           >
           <input
             data-testid="lastNameInput"
+            id="lastNameInput"
             placeholder="Last Name"
             type="text"
           >
           <input
             data-testid="idInput"
+            id="idInput"
             placeholder="ID Number"
-            type="text"
+            type="number"
           >
           <input
             data-testid="titleInput"
+            id="titleInput"
             placeholder="Job Title"
             type="text"
           >
           <input
             data-testid="annualSalaryInput"
+            id="annual-salary"
             placeholder="Annual Salary"
-            type="text"
+            type="number"
           >
-          <button data-testid="submit" id="submit-btn">Submit</button>
+          <button data-testid="submitButton" id="submit-btn">Submit</button>
     
       </form>
     </section>
 
-    <section></section>
+    <section>
       <h3>Employees</h3>
       <table id="table">
         <thead>
@@ -58,16 +63,13 @@
             <th>ID</th>
             <th>Job Title</th>
             <th>Annual Salary</th>
+            <th></th>
 
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
           <tr>
-          <!--- location where form inputs will show in table
-          <td></td>
-          <td></td>
-          <td></td>
-          -->
+          <!--- location where form inputs will show in table -->
           </tr>
 
 
@@ -76,8 +78,7 @@
     </section>
   </main>
 
-  <footer id="footer-element" onSubmit="performSubmit(event)">
-    <h3>Total Monthly: <span id="total_count"></span></h3>
+  <footer id="footer-element">
 
   </footer>
 </body>
